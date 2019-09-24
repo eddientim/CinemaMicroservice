@@ -1,15 +1,15 @@
-# CinemaMicroservice
+# Cinema Microservice
 Microservice Cinema Service
 
 
-##Tech Stack 
+## Tech Stack 
 - Spring Framework 
 - Java 11 
 - Mongo DB 
 - Maybe Docker TBD
 - Maven 
 
-##Microservices
+## Microservices
 
 - Movies Service example
 - Cinema Catalog Service example
@@ -19,7 +19,7 @@ Microservice Cinema Service
 - API Gateway Service example
 
 
-##License 
+## License 
 MIT License
 
 Copyright (c) 2019 eddientim
