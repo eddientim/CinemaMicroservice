@@ -1,0 +1,17 @@
+version: '3.5'
+
+services:
+
+  cinemamicroservice:
+    image: amazon/dynamodb-local:latest
+    container_name: cinemamicroservice
+    entrypoint: java
+    command: "-jar DynamoDB.jar -sharedDB -dbPath / data"
+    restart: always
+    volumes:
+      - ./dynamodb:/data
+    ports:
+      - "8000:8000"
+volumes:
+  dynamodb:
+    external: false

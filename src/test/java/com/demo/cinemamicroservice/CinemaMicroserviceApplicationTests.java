@@ -11,6 +11,8 @@ public class CinemaMicroserviceApplicationTests {
 
 	@Test
 	public void contextLoads() {
+
+
 	}
 
 }

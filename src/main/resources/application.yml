@@ -1,0 +1,8 @@
+server:
+  port: 8000
+
+dynamodb:
+  region: eu-west-2
+  tableNameEnvironmentProfile: local
+  endpoint: http://localhost:8000
+  local: true
