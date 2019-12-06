@@ -1,0 +1,63 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+  <mirrors>
+    <mirror>
+      <id>nexus</id>
+      <url>https://nexus.cloud.aioinissaydowa.eu/repository/maven-public</url>
+      <mirrorOf>*</mirrorOf>
+    </mirror>
+  </mirrors>
+
+  <servers>
+    <server>
+      <id>releases</id>
+      <username>automated_deployment</username>
+      <password>{HP7ZGdldNvkHoBLZvrrV4nK7NhXWkhvsafN1b0BlXkFU5cBFIdsaZsDlDZwDO/gB}</password>
+    </server>
+    <server>
+      <id>snapshots</id>
+      <username>automated_deployment</username>
+      <password>{HP7ZGdldNvkHoBLZvrrV4nK7NhXWkhvsafN1b0BlXkFU5cBFIdsaZsDlDZwDO/gB}</password>
+    </server>
+    <server>
+      <id>nexus</id>
+      <username>automated_deployment</username>
+      <password>{HP7ZGdldNvkHoBLZvrrV4nK7NhXWkhvsafN1b0BlXkFU5cBFIdsaZsDlDZwDO/gB}</password>
+    </server>
+  </servers>
+
+  <profiles>
+    <profile>
+      <id>nexus</id>
+      <repositories>
+        <repository>
+          <id>central</id>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>true</enabled>
+          </snapshots>
+          <url>http://central</url>
+        </repository>
+      </repositories>
+      <pluginRepositories>
+        <pluginRepository>
+          <id>central</id>
+          <releases>
+            <enabled>true</enabled>
+          </releases>
+          <snapshots>
+            <enabled>true</enabled>
+          </snapshots>
+          <url>http://central</url>
+        </pluginRepository>
+      </pluginRepositories>
+    </profile>
+  </profiles>
+
+  <activeProfiles>
+    <activeProfile>nexus</activeProfile>
+  </activeProfiles>
+</settings>
