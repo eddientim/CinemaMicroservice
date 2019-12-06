@@ -5,7 +5,7 @@ Microservice Cinema Service
 ## Tech Stack 
 - Spring Framework 
 - Java 11 
-- Dynamo DB 
+- Dynamo DB (AWS)
 - Docker 
 - Maven 
 - Junit 5 (for testing)
