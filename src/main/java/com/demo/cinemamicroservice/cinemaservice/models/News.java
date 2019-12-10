@@ -12,7 +12,8 @@ public class News extends BaseModel {
     private Date datePublished;
     private CinemaShowing cinemaShowing;
 
-    protected News() {}
+    protected News() {
+    }
 
     public News(String title, String contentText, String imageUrl, Date datePublished, CinemaShowing cinemaShowing) {
         this.title = title;

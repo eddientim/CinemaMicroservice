@@ -2,16 +2,16 @@ package com.demo.cinemamicroservice.cinemaservice.models;
 
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
-import com.fasterxml.jackson.annotation.JsonFormat;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTypeConvertedJson;
 
 import java.util.Collection;
 
 @DynamoDBTable(tableName = "timetable")
 public class Timetable extends BaseModel implements Comparable<Timetable> {
 
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm")
+    @DynamoDBTypeConvertedJson
     private Date startDateTime;
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm")
+    @DynamoDBTypeConvertedJson
     private Date endDateTime;
     private Collection<CinemaShowing> cinemaShowings;
 
@@ -28,6 +28,7 @@ public class Timetable extends BaseModel implements Comparable<Timetable> {
     public void setStartDateTime(Date startDateTime) {
         this.startDateTime = startDateTime;
     }
+
     @DynamoDBAttribute
     public Date getEndDateTime() {
         return endDateTime;
@@ -49,7 +50,7 @@ public class Timetable extends BaseModel implements Comparable<Timetable> {
     @Override
     public int compareTo(Timetable t) {
         if (startDateTime.equals(t.startDateTime)) return 0;
-        else if (startDateTime.before(t.startDateTime)) return 1;
+        else if (startDateTime.equals(t.startDateTime)) return 1;
         else return -1;
     }
 }

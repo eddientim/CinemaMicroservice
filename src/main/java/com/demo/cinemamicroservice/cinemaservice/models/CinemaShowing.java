@@ -14,7 +14,7 @@ import java.util.Collection;
 @Builder
 @EqualsAndHashCode
 @DynamoDBTable(tableName = "cinema_showing")
-public class CinemaShowing extends BaseModel{
+public class CinemaShowing extends BaseModel {
     private Long movieId;
     private String movieTitle;
     private String posterPath;
@@ -26,7 +26,8 @@ public class CinemaShowing extends BaseModel{
 
     private String formattedShowings; //stored entity
 
-    protected CinemaShowing() {}
+    protected CinemaShowing() {
+    }
 
     public CinemaShowing(Long movieId, String movieTitle, String posterPath, Timetable timetable, ShowingType showingType, Room room, BigDecimal ticketPrice) {
         this.movieId = movieId;
@@ -52,6 +53,7 @@ public class CinemaShowing extends BaseModel{
     public void setMovieId(Long movieId) {
         this.movieId = movieId;
     }
+
     @DynamoDBAttribute
     public String getMovieTitle() {
         return movieTitle;
@@ -105,6 +107,7 @@ public class CinemaShowing extends BaseModel{
     public void setTicketPrice(BigDecimal ticketPrice) {
         this.ticketPrice = ticketPrice;
     }
+
     @DynamoDBAttribute
     public Collection<Reservation> getReservations() {
         return reservations;

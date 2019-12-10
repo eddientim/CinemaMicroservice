@@ -14,7 +14,8 @@ public class ReservationStatus extends BaseModel {
     private String statusTitle;
     private Collection<Reservation> reservations;
 
-    protected ReservationStatus() {}
+    protected ReservationStatus() {
+    }
 
     public ReservationStatus(String statusTitle, Collection<Reservation> reservations) {
         this.statusTitle = statusTitle;

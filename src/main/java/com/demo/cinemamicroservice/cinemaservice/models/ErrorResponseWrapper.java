@@ -1,10 +1,11 @@
 package com.demo.cinemamicroservice.cinemaservice.models;
 
-public class ErrorResponseWrapper extends BaseModel{
+public class ErrorResponseWrapper extends BaseModel {
 
     private Error error;
 
-    public ErrorResponseWrapper() { }
+    public ErrorResponseWrapper() {
+    }
 
     public ErrorResponseWrapper(Error error) {
         this.error = error;
