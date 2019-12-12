@@ -11,4 +11,5 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class RoomService extends BaseService<Room, RoomRepository> {
 
+
 }

@@ -3,6 +3,7 @@ package com.demo.cinemamicroservice.cinemaservice.models;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
 import com.amazonaws.services.ec2.model.Reservation;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
@@ -12,6 +13,7 @@ import java.util.Collection;
 
 @ToString
 @Builder
+@AllArgsConstructor
 @EqualsAndHashCode
 @DynamoDBTable(tableName = "cinema_showing")
 public class CinemaShowing extends BaseModel {
