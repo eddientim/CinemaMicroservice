@@ -1,6 +1,6 @@
-package com.demo.cinemamicroservice.cinemaservice.models;
-
-public class Room extends BaseModel {
-
-
-}
+//package com.demo.cinemamicroservice.cinemaservice.models;
+//
+//public class Room extends BaseModel {
+//
+//
+//}

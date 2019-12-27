@@ -1,8 +1,22 @@
 version: '3.5'
 
 services:
+#  cinemamicroserive:
+#    image: cinemamicroservice
+#    container_name:
+#    build:
+#      context:
+#      dockerfile:
+#    environment:
+#      SERVER_PORT: 5540
+#      DYNAMODB:
+#      AWS_ACCESS_KEY_ID:
+#      AWS_SECRET_ACCESS_KEY:
+#      DYNAMODB_LOCAL: 'true'
 
-  cinemamicroservice:
+
+
+  local-cinemamicroservice:
     image: amazon/dynamodb-local:latest
     container_name: cinemamicroservice
     entrypoint: java
@@ -14,4 +28,4 @@ services:
       - "8000:8000"
 volumes:
   dynamodb:
-    external: false
+    external: true
