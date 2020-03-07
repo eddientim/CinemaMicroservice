@@ -7,11 +7,6 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class GenericService {
 
-    public int calculate() {
-        int a = 1;
-        int b = 2;
 
-        return a + b;
-    }
 
 }

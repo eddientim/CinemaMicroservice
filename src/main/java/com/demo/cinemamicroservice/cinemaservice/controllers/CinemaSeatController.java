@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/cinema-seats")
 public class CinemaSeatController {
 
-    @GetMapping("/cinema-seats/{id}")
+    @GetMapping("/{id}")
     public String cinemaSeatId() {
         return "hello cinema";
     }

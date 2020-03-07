@@ -1,4 +1,12 @@
 package com.demo.cinemamicroservice.cinemaservice.repositories;
 
-public class RoomRepository {
+
+import org.springframework.data.repository.CrudRepository;
+
+import java.util.List;
+
+public interface RoomRepository extends CrudRepository<RoomRepository, String> {
+
+    List<Room> findByMapId(String map);
+
 }

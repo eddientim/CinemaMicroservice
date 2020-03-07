@@ -6,4 +6,5 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/cinema-showings")
 public class CinemaShowingController {
+
 }

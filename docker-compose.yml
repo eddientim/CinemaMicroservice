@@ -1,20 +1,22 @@
 version: '3.5'
 
 services:
-#  cinemamicroserive:
-#    image: cinemamicroservice
-#    container_name:
-#    build:
-#      context:
-#      dockerfile:
-#    environment:
-#      SERVER_PORT: 5540
-#      DYNAMODB:
-#      AWS_ACCESS_KEY_ID:
-#      AWS_SECRET_ACCESS_KEY:
-#      DYNAMODB_LOCAL: 'true'
-
-
+  cinemamicroserive:
+    image: cinemamicroservice
+    container_name: cinemamicroservice
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    environment:
+      SERVER_PORT: 5540
+      DYNAMODB_ENDPOINT: http://local-cinema:8000
+      AWS_ACCESS_KEY_ID: LOCAL_DUMMY_KEY
+      AWS_SECRET_ACCESS_KEY: LOCAL_DUMMY_KEY
+      DYNAMODB_LOCAL: 'true'
+      JAVA_TOOL_OPTIONS: -agentlib:jdwp=transport=dt_socet,address=15540,server=y,suspend=n
+    ports:
+      - "5540:5540"
+      - "15540:15540"
 
   local-cinemamicroservice:
     image: amazon/dynamodb-local:latest

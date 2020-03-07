@@ -9,6 +9,7 @@ public class RoomDTO {
     public Integer numRows;
 
     public Integer numCols;
+
     public String description;
 
     protected RoomDTO() {
