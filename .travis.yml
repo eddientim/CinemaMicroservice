@@ -1,3 +1,2 @@
-pipline:
-  language: java
-  jdk: orcalejdk11
+language: java
+jdk: orcalejdk11
