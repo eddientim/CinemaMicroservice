@@ -6,6 +6,10 @@ import java.util.Optional;
 
 public interface CinemaShowingRepository extends CrudRepository<CinemaShowingRepository, Long> {
 
-    @Override
-    Optional<CinemaShowingRepository> findById(Long Id);
+    /**
+     * This finds the cinema showings and returns a list
+     * @param Id
+     * @return a movie ID
+     */
+    Optional<CinemaShowingRepository> findByCinemaShowingRepository(Long Id);
 }

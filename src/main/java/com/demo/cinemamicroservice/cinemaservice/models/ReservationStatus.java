@@ -1,7 +1,6 @@
 package com.demo.cinemamicroservice.cinemaservice.models;
 
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
-import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBRangeKey;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
 
 import java.util.Collection;
@@ -30,7 +29,7 @@ public class ReservationStatus {
         this.statusTitle = statusTitle;
     }
 
-    @DynamoDBRangeKey
+    @DynamoDBAttribute
     public Collection<Reservations> getReservations() {
         return reservations;
     }

@@ -4,7 +4,6 @@ import java.math.BigDecimal;
 
 public class CinemaShowingDTO {
 
-
     private BigDecimal ticketPrice;
     private String showingTimes;
     private Integer duration;

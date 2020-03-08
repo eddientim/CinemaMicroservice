@@ -5,9 +5,7 @@ import java.util.List;
 public class ReservationDTO {
 
     public Long cinemaShowingId;
-
     public Long userId;
-
     public List<Long> seats;
 
     protected ReservationDTO() {

@@ -1,5 +1,6 @@
 package com.demo.cinemamicroservice.cinemaservice.models;
 
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
 
 import java.util.Collection;
@@ -25,6 +26,7 @@ public class Reservations {
         this.seats = seats;
     }
 
+    @DynamoDBAttribute
     public List<CinemaShowing> getCinemaShowing() {
         return cinemaShowing;
     }
@@ -33,6 +35,7 @@ public class Reservations {
         this.cinemaShowing = cinemaShowing;
     }
 
+    @DynamoDBAttribute
     public Long getUserId() {
         return userId;
     }
@@ -41,6 +44,7 @@ public class Reservations {
         this.userId = userId;
     }
 
+    @DynamoDBAttribute
     public String getUsername() {
         return username;
     }
@@ -49,6 +53,7 @@ public class Reservations {
         this.username = username;
     }
 
+    @DynamoDBAttribute
     public Collection<CinemaSeat> getSeats() {
         return seats;
     }
@@ -57,6 +62,7 @@ public class Reservations {
         this.seats = seats;
     }
 
+    @DynamoDBAttribute
     public ReservationStatus getStatus() {
         return status;
     }
