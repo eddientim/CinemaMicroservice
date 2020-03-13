@@ -6,8 +6,8 @@
 //import com.amazonaws.services.dynamodbv2.model.ProvisionedThroughput;
 //import com.amazonaws.services.dynamodbv2.model.ResourceInUseException;
 //import com.demo.cinemamicroservice.CinemaMicroserviceApplication;
-//import com.demo.cinemamicroservice.cinemaservice.dynamo.models.CinemaSeat;
-//import com.demo.cinemamicroservice.cinemaservice.dynamo.models.Room;
+//import com.demo.cinemamicroservice.cinemaservice.repositories.dynamo.models.CinemaSeat;
+//import com.demo.cinemamicroservice.cinemaservice.repositories.dynamo.models.Room;
 //import com.demo.cinemamicroservice.cinemaservice.repositories.CinemaSeatRepository;
 //
 //import com.demo.cinemamicroservice.cinemaservice.repositories.RoomRepository;

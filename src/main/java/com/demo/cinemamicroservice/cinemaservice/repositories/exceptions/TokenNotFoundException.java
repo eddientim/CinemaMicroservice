@@ -1,4 +1,4 @@
-package com.demo.cinemamicroservice.cinemaservice.exceptions;
+package com.demo.cinemamicroservice.cinemaservice.repositories.exceptions;
 
 public class TokenNotFoundException extends RuntimeException {
 

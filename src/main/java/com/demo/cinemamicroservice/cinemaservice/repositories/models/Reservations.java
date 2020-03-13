@@ -1,4 +1,4 @@
-package com.demo.cinemamicroservice.cinemaservice.models;
+package com.demo.cinemamicroservice.cinemaservice.repositories.models;
 
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;

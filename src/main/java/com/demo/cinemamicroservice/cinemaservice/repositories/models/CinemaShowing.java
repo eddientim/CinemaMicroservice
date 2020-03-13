@@ -1,20 +1,21 @@
-package com.demo.cinemamicroservice.cinemaservice.models;
+package com.demo.cinemamicroservice.cinemaservice.repositories.models;
 
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBHashKey;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBTable;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 import org.springframework.data.annotation.Id;
 
 import java.math.BigDecimal;
-import java.time.Instant;
-import java.util.Collection;
 import java.util.List;
 
 @ToString
 @Builder
+@NoArgsConstructor
 @AllArgsConstructor
 @DynamoDBTable(tableName = "cinema_showing")
 public class CinemaShowing {
@@ -25,12 +26,10 @@ public class CinemaShowing {
     private String posterPath;
     private Integer room;
     private BigDecimal ticketPrice;
-    private Collection<Reservations> reservations;
+    private List<Reservations> reservations;
     private List<Timetable> timetable;
 
-    protected CinemaShowing() {
-    }
-
+    @DynamoDBHashKey
     public Long getMovieId() {
         return movieId;
     }
@@ -76,11 +75,11 @@ public class CinemaShowing {
     }
 
     @DynamoDBAttribute
-    public Collection<Reservations> getReservations() {
+    public List<Reservations> getReservations() {
         return reservations;
     }
 
-    public void setReservations(Collection<Reservations> reservations) {
+    public void setReservations(List<Reservations> reservations) {
         this.reservations = reservations;
     }
 
@@ -92,6 +91,4 @@ public class CinemaShowing {
     public void setTimetable(List<Timetable> timetable) {
         this.timetable = timetable;
     }
-
-
 }

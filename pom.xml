@@ -19,7 +19,10 @@
         <maven.compiler.target>11</maven.compiler.target>
         <maven.compiler.source>11</maven.compiler.source>
         <spring-cloud.version>Greenwich.BUILD-SNAPSHOT</spring-cloud.version>
-        <!--<checkstyle.plugin.version>3.1.0</checkstyle.plugin.version>-->
+        <lombok.version>1.18.4</lombok.version>
+        <spotbugs.version>3.1.12</spotbugs.version>
+        <checkstyle.plugin.version>3.1.0</checkstyle.plugin.version>
+        <spring.data.dynamodb.version>5.0.4</spring.data.dynamodb.version>
 
         <!--JUnit 5 Unit Testing-->
         <junit-jupiter.version>5.2.0</junit-jupiter.version>
@@ -45,6 +48,11 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-oauth2-resource-server</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -191,5 +199,4 @@
             </snapshots>
         </pluginRepository>
     </pluginRepositories>
-
 </project>
