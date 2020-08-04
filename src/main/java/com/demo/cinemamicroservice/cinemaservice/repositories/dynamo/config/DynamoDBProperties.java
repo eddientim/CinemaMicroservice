@@ -1,4 +1,4 @@
-package com.demo.cinemamicroservice.cinemaservice.config;
+package com.demo.cinemamicroservice.cinemaservice.repositories.dynamo.config;
 
 import lombok.Getter;
 import lombok.Setter;

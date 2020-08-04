@@ -1,0 +1,15 @@
+server:
+  port: 5540
+
+# Application name and version
+spring:
+  application:
+    name: @project.artifactId@
+    system.name: @project.groupId@
+    build.version: @project.version@
+
+dynamodb:
+  region: eu-west-2 #this depends on your region, please change when required
+  table-name-environment-prefix: local
+  endpoint: http://localhost:8000
+  local: false #Don't changed this

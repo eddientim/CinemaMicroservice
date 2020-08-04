@@ -1,5 +1,5 @@
-package com.demo.cinemamicroservice.cinemaservice.repositories;
-
-public class TimetableRepository {
-
-}
+//package com.demo.cinemamicroservice.cinemaservice.repositories;
+//
+//public class TimetableRepository {
+//
+//}

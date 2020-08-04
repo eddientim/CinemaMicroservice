@@ -1,7 +1,6 @@
-package com.demo.cinemamicroservice.cinemaservice.repositories;
-
-public interface NewsRepository {
-
-
-
-}
+//package com.demo.cinemamicroservice.cinemaservice.repositories;
+//
+//public interface NewsRepository {
+//
+//
+//}

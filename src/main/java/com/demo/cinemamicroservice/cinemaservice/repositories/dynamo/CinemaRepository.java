@@ -30,7 +30,7 @@ public class CinemaRepository {
      * @throws ModelNotFoundException
      * @throws DuplicateIMovieIdException
      */
-    public List<CinemaShowing> findCinemaByShowing(Long movieId) throws ModelNotFoundException, DuplicateIMovieIdException {
+    public List<CinemaShowing> findByCinemaShowing(Long movieId) throws ModelNotFoundException, DuplicateIMovieIdException {
     CinemaShowing cinemaShowing = new CinemaShowing();
     cinemaShowing.setMovieId(movieId);
 

@@ -1,4 +1,4 @@
-package com.demo.cinemamicroservice.cinemaservice.repositories;
-
-public class ReservationRepository {
-}
+//package com.demo.cinemamicroservice.cinemaservice.repositories;
+//
+//public class ReservationRepository {
+//}
