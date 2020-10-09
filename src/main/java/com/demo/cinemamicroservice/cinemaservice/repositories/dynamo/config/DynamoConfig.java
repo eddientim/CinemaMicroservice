@@ -1,6 +1,8 @@
 package com.demo.cinemamicroservice.cinemaservice.repositories.dynamo.config;
 
 import com.amazonaws.ClientConfiguration;
+import com.amazonaws.auth.AWSCredentials;
+import com.amazonaws.auth.BasicAWSCredentials;
 import com.amazonaws.client.builder.AwsClientBuilder;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
@@ -8,10 +10,12 @@ import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapperConfig;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.socialsignin.spring.data.dynamodb.repository.config.EnableDynamoDBRepositories;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
+import org.springframework.web.servlet.handler.HandlerMappingIntrospector;
 
 import javax.naming.ConfigurationException;
 
@@ -24,14 +28,14 @@ public class DynamoConfig {
 
     private static final int ONE_MINUTE_MS = 60000;
 
-//    @Value("${amazon.dynamodb.endpoint}")
-//    private String amazonDynamoDBEndpoint;
-//
-//    @Value("${amazon.aws.accesskey}")
-//    private String amazonAWSAccessKey;
-//
-//    @Value("${amazon.aws.secretkey}")
-//    private String amazonAWSSecretKey;
+    @Value("${amazon.dynamodb.endpoint}")
+    private String amazonDynamoDBEndpoint;
+
+    @Value("${amazon.aws.accesskey}")
+    private String amazonAWSAccessKey;
+
+    @Value("${amazon.aws.secretkey}")
+    private String amazonAWSSecretKey;
 
     private final DynamoDBProperties config;
 
@@ -44,13 +48,13 @@ public class DynamoConfig {
 //        return amazonDynamoDB;
 //    }
 
-//    /**
-//     * @return
-//     */
-//    @Bean
-//    public AWSCredentials amazonAWSCredentials() {
-//        return new BasicAWSCredentials(amazonAWSAccessKey, amazonAWSSecretKey);
-//    }
+    /**
+     * @return aws credentials
+     */
+    @Bean
+    public AWSCredentials amazonAWSCredentials() {
+        return new BasicAWSCredentials(amazonAWSAccessKey, amazonAWSSecretKey);
+    }
 
     /**
      * creates the local or AWS {@link AmazonDynamoDB} interface using configured properties
@@ -108,8 +112,8 @@ public class DynamoConfig {
         return config.getTableNameEnvironmentPrefix() + "-";
     }
 
-//    @Bean(name = "mvcHandlerMappingIntrospector")
-//    public HandlerMappingIntrospector mvcHandlerMappingIntrospector() {
-//        return new HandlerMappingIntrospector(context);
-//    }
+    @Bean(name = "mvcHandlerMappingIntrospector")
+    public HandlerMappingIntrospector mvcHandlerMappingIntrospector() {
+        return new HandlerMappingIntrospector();
+    }
 }
